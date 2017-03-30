@@ -46,5 +46,7 @@ public class Main {
 
 
         System.out.print("The duplicated numbers in the lists are.." + ju.findDupes(listOne, listTwo));
+        System.out.print("\n");
+        System.out.print("The duplicated numbers in the lists are.." + ju.findDupes2(listOne, listTwo));
     }
 }
