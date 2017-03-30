@@ -42,6 +42,9 @@ public class Main {
         listTwo.add(24);
         listTwo.add(21);
 
-        System.out.print("The duplicated numbers in the lists are..");
+        JonathanUtil ju = new JonathanUtil();
+
+
+        System.out.print("The duplicated numbers in the lists are.." + ju.findDupes(listOne, listTwo));
     }
 }
