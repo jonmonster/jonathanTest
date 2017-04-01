@@ -15,11 +15,27 @@ public class Main {
          * Then print these numbers to the console
          */
 
-        String[] a = new String[] {"ab", "lion", "x", "z", "house", "dog", "cat"};
-        //Sorted {“x”, “z”, “ab”, “cat”, “dog”, “lion”, “house”}
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(66);
+        numbers.add(78);
+        numbers.add(33);
+        numbers.add(54);
+        numbers.add(79);
+        numbers.add(43);
+        numbers.add(26);
+        numbers.add(29);
+        numbers.add(11);
+
+        List<Integer> primeNumbers = new ArrayList<Integer>();
 
         JonathanUtil jonathanUtil = new JonathanUtil();
-        List<String> solution = jonathanUtil.sortArray(a);
-        System.out.print(solution);
+        primeNumbers = jonathanUtil.isPrime(numbers);
+
+        for(Integer number : primeNumbers) {
+            System.out.println("The number " + number + " is prime.");
+        }
     }
 }

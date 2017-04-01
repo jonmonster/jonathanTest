@@ -113,4 +113,38 @@ public class JonathanUtil {
         return solution;
     }
 
+    public List isEven(List<Integer> n) {
+        List<Integer> evenList = new ArrayList<Integer>();
+        for(int i=0; i<n.size(); i++){
+            int check = n.get(i) % 2;
+            if(check == 0){
+                evenList.add(n.get(i));
+            }
+        }
+
+        return evenList;
+    }
+
+    public List isPrime(List<Integer> n){
+        List<Integer> primeList = new ArrayList<Integer>();
+
+        for(int i=0; i<n.size(); i++){
+            boolean primeCheck = true;
+
+            for(int j = 2; j < Math.sqrt(n.get(i)); j++){
+                int check = n.get(i) % j;
+                if(check == 0){
+                    primeCheck=false;
+                    break;
+                }
+            }
+
+            //int check = n.get(i) % 2;
+            if(primeCheck){
+                primeList.add(n.get(i));
+            }
+        }
+
+        return primeList;
+    }
 }
