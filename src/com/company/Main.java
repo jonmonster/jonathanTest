@@ -18,6 +18,7 @@ public class Main {
         ArrayList<Integer> listTwo = new ArrayList<Integer>();
 
         listOne.add(1);
+        listOne.add(1);
         listOne.add(3);
         listOne.add(4);
         listOne.add(6);
@@ -45,7 +46,7 @@ public class Main {
         JonathanUtil ju = new JonathanUtil();
 
 
-        System.out.print("The duplicated numbers in the lists are.." + ju.findDupes(listOne, listTwo));
+        System.out.print("The duplicated numbers in the lists are.." + ju.findDuplicates(listOne, listTwo));
         System.out.print("\n");
         System.out.print("The duplicated numbers in the lists are.." + ju.findDupes2(listOne, listTwo));
     }

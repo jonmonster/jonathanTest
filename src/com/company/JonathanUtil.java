@@ -7,8 +7,8 @@ public class JonathanUtil {
 
     public JonathanUtil() { }
 
-    public ArrayList<Integer> findDupes(ArrayList<Integer> a, ArrayList<Integer>b){
-        ArrayList<Integer> results = new ArrayList<Integer>();
+    public List<Integer> findDupes(ArrayList<Integer> a, ArrayList<Integer>b){
+        List<Integer> results = new LinkedList<Integer>();
 
         for(int i=0; i< a.size(); i++){
             for(int j=0; j<b.size(); j++){
@@ -55,7 +55,7 @@ public class JonathanUtil {
          * when you add even 1 value to the list.
          */
 
-        ArrayList<Integer> results = new ArrayList<Integer>();
+        ArrayList<Integer> results = new ArrayList<>();
 
         for(int i=0; i<a.size(); i++){
             placeHolder[a.get(i)] = String.valueOf(a.get(i));
@@ -67,6 +67,23 @@ public class JonathanUtil {
             }
         }
 
+        return results;
+    }
+
+
+    public List<Integer> findDuplicates(List<Integer> a, List<Integer> b){
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        List<Integer> results = new ArrayList<Integer>();
+
+        for(int i=0; i<a.size(); i++) {
+            map.put(a.get(i), 0);
+        }
+
+        for(int j=0; j<b.size(); j++) {
+            if (map.containsKey(b.get(j))) {
+                results.add(b.get(j));
+            }
+        }
         return results;
     }
 
