@@ -24,9 +24,12 @@ public class Main {
       */
 
         JonathanUtil jonathanUtil = new JonathanUtil();
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
-        List<Integer> solution = jonathanUtil.calculatedProduct(numbers);
+        String str = "Zelda is a really fun game";
+        List<String> suffixes = jonathanUtil.generateSuffixTree(str);
 
-        System.out.println(solution);
+        //OOP- abstraction, encapsulation, polymorphism, inheritence
+
+
+        System.out.println(suffixes);
     }
 }

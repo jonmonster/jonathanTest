@@ -162,4 +162,25 @@ public class JonathanUtil {
         }
         return results;
     }
+
+    public List<String> generateSuffixTree(String str){
+        List<String> results = new ArrayList<String>();
+        results.add(str);
+
+        //char[] sentence = str.toCharArray();
+
+        for(int i=0; i< str.length(); i++){
+//            String combSent = "";
+//            for(int j=(i+1); j<sentence.length; j++){
+//                combSent = combSent + sentence[j];
+//            }
+//            if(str != ""){
+//                results.add(combSent);
+//            }
+            results.add(str.substring(i));
+
+        }
+
+        return results;
+    }
 }
