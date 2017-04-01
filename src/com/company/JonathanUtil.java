@@ -147,4 +147,19 @@ public class JonathanUtil {
 
         return primeList;
     }
+
+    public List<Integer> calculatedProduct(List<Integer> numbers){
+        List<Integer> results = new ArrayList<Integer>();
+
+        for(int i=0; i<numbers.size(); i++){
+            Integer product = 1;
+            for(int j=0; j<numbers.size(); j++){
+                if(j!=i){
+                    product = product * numbers.get(j);
+                }
+            }
+            results.add(product);
+        }
+        return results;
+    }
 }

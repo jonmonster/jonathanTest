@@ -1,41 +1,32 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        /**
-         * Assignment #1
-         * Create a method that looks at the below lists (listOne and listTwo), and finds the numbers that exists in both of the lists
-         * Add this method to the JonathanUtil class (I just added this class)
-         * For example, both lists have the number 1 in them.  Your method should find the number 1.
-         * Then print these numbers to the console
-         */
-
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(5);
-        numbers.add(66);
-        numbers.add(78);
-        numbers.add(33);
-        numbers.add(54);
-        numbers.add(79);
-        numbers.add(43);
-        numbers.add(26);
-        numbers.add(29);
-        numbers.add(11);
-
-        List<Integer> primeNumbers = new ArrayList<Integer>();
+      /*
+       * Transforms a list of numbers where the output list is:
+       *   a) of equivalent length, where each of those numbers
+       *   b) is the product of all the numbers in the input, EXCEPT
+       *   c) the number at the corresponding index, AND
+       *   d) division is not used
+       *
+       * For example, given this input:
+       *   [1,2,3,4,5]
+       * Generates this output:
+       *   [120,60,40,30,24]
+       *   [2*3*4*5, 1*3*4*5,
+       *
+      */
 
         JonathanUtil jonathanUtil = new JonathanUtil();
-        primeNumbers = jonathanUtil.isPrime(numbers);
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+        List<Integer> solution = jonathanUtil.calculatedProduct(numbers);
 
-        for(Integer number : primeNumbers) {
-            System.out.println("The number " + number + " is prime.");
-        }
+        System.out.println(solution);
     }
 }
