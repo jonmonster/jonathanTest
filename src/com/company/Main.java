@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -14,40 +15,11 @@ public class Main {
          * Then print these numbers to the console
          */
 
-        ArrayList<Integer> listOne = new ArrayList<Integer>();
-        ArrayList<Integer> listTwo = new ArrayList<Integer>();
+        String[] a = new String[] {"ab", "lion", "x", "z", "house", "dog", "cat"};
+        //Sorted {“x”, “z”, “ab”, “cat”, “dog”, “lion”, “house”}
 
-        listOne.add(1);
-        listOne.add(1);
-        listOne.add(3);
-        listOne.add(4);
-        listOne.add(6);
-        listOne.add(23);
-        listOne.add(56);
-        listOne.add(47);
-        listOne.add(38);
-        listOne.add(96);
-        listOne.add(54);
-        listOne.add(53);
-        listOne.add(11);
-        listOne.add(77);
-
-        listTwo.add(1);
-        listTwo.add(65);
-        listTwo.add(54);
-        listTwo.add(78);
-        listTwo.add(79);
-        listTwo.add(96);
-        listTwo.add(44);
-        listTwo.add(32);
-        listTwo.add(24);
-        listTwo.add(21);
-
-        JonathanUtil ju = new JonathanUtil();
-
-
-        System.out.print("The duplicated numbers in the lists are.." + ju.findDuplicates(listOne, listTwo));
-        System.out.print("\n");
-        System.out.print("The duplicated numbers in the lists are.." + ju.findDupes2(listOne, listTwo));
+        JonathanUtil jonathanUtil = new JonathanUtil();
+        List<String> solution = jonathanUtil.sortArray(a);
+        System.out.print(solution);
     }
 }

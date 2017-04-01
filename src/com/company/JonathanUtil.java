@@ -87,4 +87,30 @@ public class JonathanUtil {
         return results;
     }
 
+    public List<String> sortArray(String[] array){
+        List<String> solution = new ArrayList<String>();
+
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        Integer maxVal = 0;
+
+        for(int i=0; i<array.length; i++){
+            map.put(array[i],array[i].length());
+            if(array[i].length() > maxVal){
+                maxVal = array[i].length();
+            }
+        }
+
+        for(int i=0; i <= maxVal; i++){
+            List<String> placeHolder = new ArrayList<String>();
+            for(Map.Entry<String, Integer> kvp : map.entrySet()){
+                if(kvp.getValue() == i){
+                       placeHolder.add(kvp.getKey());
+                }
+            }
+            Collections.sort(placeHolder);
+            solution.addAll(placeHolder);
+        }
+        return solution;
+    }
+
 }
