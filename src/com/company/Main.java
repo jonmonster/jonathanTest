@@ -31,5 +31,6 @@ public class Main {
 
 
         System.out.println(suffixes);
+        System.out.println("Check-in test");
     }
 }
